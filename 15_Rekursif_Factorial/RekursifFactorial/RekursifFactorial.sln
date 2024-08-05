@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RekursifFactorial", "RekursifFactorial.vcxproj", "{74BAF9E7-D4FA-4FFC-AE57-6CF03A4DAAF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74BAF9E7-D4FA-4FFC-AE57-6CF03A4DAAF7}.Debug|x64.ActiveCfg = Debug|x64
+		{74BAF9E7-D4FA-4FFC-AE57-6CF03A4DAAF7}.Debug|x64.Build.0 = Debug|x64
+		{74BAF9E7-D4FA-4FFC-AE57-6CF03A4DAAF7}.Debug|x86.ActiveCfg = Debug|Win32
+		{74BAF9E7-D4FA-4FFC-AE57-6CF03A4DAAF7}.Debug|x86.Build.0 = Debug|Win32
+		{74BAF9E7-D4FA-4FFC-AE57-6CF03A4DAAF7}.Release|x64.ActiveCfg = Release|x64
+		{74BAF9E7-D4FA-4FFC-AE57-6CF03A4DAAF7}.Release|x64.Build.0 = Release|x64
+		{74BAF9E7-D4FA-4FFC-AE57-6CF03A4DAAF7}.Release|x86.ActiveCfg = Release|Win32
+		{74BAF9E7-D4FA-4FFC-AE57-6CF03A4DAAF7}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A6B5CC0-2DEA-4058-AB71-B4B6D93453F4}
+	EndGlobalSection
+EndGlobal
