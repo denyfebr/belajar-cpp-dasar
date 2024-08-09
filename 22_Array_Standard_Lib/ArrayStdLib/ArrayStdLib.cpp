@@ -1,30 +1,33 @@
 #include <iostream>
 #include <array>
+#include <stdio.h>
+
 using namespace std;
 
 int main() {
-	// membuat array dengan menggunakan standard library
-	// array<int, jumlah array> nama array
+    // membuat array dengan menggunakan standard library
+    // array<int, jumlah array> nama array
 
-	array <int, 5> nilai;
+    array<int, 5> nilai;
 
-	for (int i = 0;i <= 4;i++) {
-		nilai[i] = i;
-		cout << "nilai [" << i << "] = " << nilai[i];
-		cout << " address " << &nilai[i] << endl;
-	}
+    for (int i = 0; i <= 4; i++) {
+        nilai[i] = i;
+        cout << "nilai [" << i << "] = " << nilai[i];
+        cout << " address " << &nilai[i] << endl;
+    }
 
-	cout << endl;
-	//ukuran array
-	cout << "ukuran: " << nilai.size() << endl;
+    cout << endl;
+    // ukuran array
+    cout << "ukuran: " << nilai.size() << endl;
 
-	//address awal dari array
-	//std::cout << "address awal : " << nilai.begin() << endl;
+    // address awal dari array
+    printf("address awal : %p\n", (void*)&nilai[0]);
 
-	//address akhir dari array
-	//std::cout << "address akhir : " << nilai.end() << endl;
+    // address akhir dari array
+    printf("address akhir: %p\n", (void*)&nilai[nilai.size() - 1]);
 
-	//address akhir dari array
-	cout << "nilai ke-2 : " << nilai.at(2) << endl;
+    // nilai ke-2 dari array
+    cout << "nilai ke-2 : " << nilai.at(2) << endl;
+
+    return 0;
 }
-
