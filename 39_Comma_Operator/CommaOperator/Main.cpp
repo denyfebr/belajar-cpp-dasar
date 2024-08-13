@@ -14,10 +14,7 @@ int main() {
 		a = (b + c);
 	*/
 	
-	a = (b = 1, c = 5, (b+c));
+	a = (b = 1, cout << b << endl, c = 5, cout << c << endl, (b+c));
 
 	cout << a << endl;
-	cout << b << endl;
-	cout << c << endl;
-
 }
