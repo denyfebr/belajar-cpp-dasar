@@ -1,0 +1,28 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main() {
+	fstream myFile;
+	int hasil;
+
+	myFile.open("data.bin", ios::in, ios::binary);
+	myFile.read(reinterpret_cast<char*>(&hasil), sizeof(hasil));
+
+	cout << "Besar integer = " << sizeof(hasil) << endl;
+	cout << hasil << endl;
+
+	myFile.close();
+}
+
+/*
+
+	fstream myFile;
+	int number = 12345;
+	myFile.open("data.bin", ios::out, ios::binary);
+	myFile.write(reinterpret_cast<char*>(&number), sizeof(number));
+	myFile.close();
+
+*/
