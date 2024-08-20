@@ -1,11 +1,19 @@
 #include<iostream>
 #include<string>
+#include<fstream>
 
 using namespace std;
 
 int getOption();
 
+void checkDatabase(fstream& data);
+
 int main() {
+
+	fstream data;
+
+	checkDatabase(data);
+
 	int pilihan = getOption();
 	char is_continue;
 
@@ -54,7 +62,7 @@ int main() {
 int getOption() {
 
 	int input;
-	system("cls");
+	//system("cls");
 
 	cout << "\nProgram CRUD data mahasiswa" << endl;
 	cout << "=============================" << endl;
@@ -67,4 +75,19 @@ int getOption() {
 	cout << "pilih [1-5]? : ";
 	cin >> input;
 	return input;
+}
+
+void checkDatabase(fstream& data) {
+	data.open("data.bin", ios::out | ios::in | ios::binary);
+
+	//Check file ada atau tidak
+	if (data.is_open()) {
+		cout << "Database ditemukan";
+	}
+	else {
+		cout << "Database tidak ditemukan, buat database baru";
+		data.close();
+		data.open("data.bin", ios::trunc | ios::out | ios::in | ios::binary);
+	}
+
 }
