@@ -4,9 +4,29 @@
 
 using namespace std;
 
-int getOption();
+struct Mahasiswa {
+	int pk;
+	string NIM;
+	string nama;
+	string jurusan;
+};
 
+int getOption();
 void checkDatabase(fstream& data);
+
+void addDataMahasiswa(fstream& data) {
+
+	Mahasiswa inputMahasiswa;
+
+	inputMahasiswa.pk = 1;
+
+	cout << "Nama: ";
+	getline(cin, inputMahasiswa.nama);
+	cout << "Jurusan: ";
+	getline(cin, inputMahasiswa.jurusan);
+	cout << "NIM: ";
+	getline(cin, inputMahasiswa.NIM);
+}
 
 int main() {
 
@@ -24,6 +44,7 @@ int main() {
 		{
 			case CREATE:
 				cout << "Menambah data mahasiswa" << endl;
+				addDataMahasiswa(data);
 				break;
 			case READ:
 				cout << "Menampilkan data mahasiswa" << endl;
@@ -74,6 +95,7 @@ int getOption() {
 	cout << "=============================" << endl;
 	cout << "pilih [1-5]? : ";
 	cin >> input;
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	return input;
 }
 
